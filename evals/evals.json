@@ -1,0 +1,23 @@
+{
+  "skill_name": "conversation-memory-manager",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "这个建站任务我们已经来回十几轮了，我担心再聊下去你就把前面的忘了。把对话归档打分，给我一份记忆清单，我来勾哪些留。",
+      "expected_output": "在项目 .memory/ 下创建完整目录结构：manifest.md（主线链含各单元评分）、mainline/ 逐单元归档（frontmatter 含 id/score/status，原文逐字保真、敏感信息打码）、checklist 清单（checkbox 行，≥4 建议保留、≤1 建议删除）。全程静默归档，只在生成清单时输出三行式提醒。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "刚才调字体加载那几轮单独开一条支线，最后只把「改用 woff2 并 preload」这个结论并回主线，中间那些试错的都清掉。",
+      "expected_output": "创建 branches/b-字体调试/branch.md 与支线单元；给出三选一建议（合并，因为有 4 分调试结论）；按用户指令执行：结论摘录进主线节点、其余试错单元移入 archive/ 并标 status=drop、manifest 分支登记更新为 merged；git 可用时 commit。AI 只在用户指令范围内操作，不擅自扩大删除范围。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "回溯到我们当初定「用 Vercel 部署」的那个节点，当时的上下文状态给我重建出来，我要改个决定。",
+      "expected_output": "从 manifest（或 git log）定位节点；生成 rollbacks/r-节点nN-时间.md 重建简报（五节齐全：任务目标截至该节点/主线摘要链/当时活跃支线/关键文件状态/继续指令，自包含）；该节点之后的单元封存为 b-回溯封存-* 支线（不删除）；向用户呈现简报并支持其改决定。",
+      "files": []
+    }
+  ]
+}
