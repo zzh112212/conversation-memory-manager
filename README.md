@@ -46,6 +46,7 @@ npx skills add zzh112212/conversation-memory-manager -g -y
 Say things like "archive this turn", "memory checklist", "branch off the font-debugging rounds", or "roll back to the node where we picked Vercel". Memory lives in `.memory/` at the project root. Works standalone; integrates optionally with `input-triage` and `context-continuity`.
 
 ## 版本 / Version
+- v1.2（2026-09-30）：终审/支线收尾组件优先——弹窗点选 + 一次确认回传替代逐条输入（新增 references/widget-checklist.md）；evals +1
 - v1.1（2026-09-30）：新增「应答进行中」自指单元规范（F1）；清单格式自检硬门槛（F3）；evals 新增 2 例（自指单元、清单格式自检）
 - v1.0（2026-09-29）：首发
 

@@ -68,10 +68,14 @@ description: "对话记忆管家：把对话当作可版本化管理的资产—
 - **合并至主线**：支线含 ≥4 分单元（如重要调试结论）→ 摘录进主线节点；
 - **归档保留**：有复用价值但不属主线 → 留在 branches/ 标记 closed；
 - **直接删除**：全为 ≤2 分试错 → 移入 archive/。
-用户拍板，AI 只建议。
+用户拍板，AI 只建议。（v1.2：支线收尾三选一同样组件优先——单组「合并/归档/删除」点选 + 确认键一次回传，见 references/widget-checklist.md）
 
 ### F5 用户终审执行
-用户改清单里的 `- [ ]` 为 `- [x]`，或口头说「保留 u005、删 u012、把 u009 挪到主线」。执行：
+用户改清单里的 `- [ ]` 为 `- [x]`，或口头说「保留 u005、删 u012、把 u009 挪到主线」。
+
+**组件优先（v1.2）**：运行时支持内联交互组件（弹窗点选）时，终审清单直接渲染为弹窗——每个待审单元一组处置按钮，建议写进按钮文字、初始不预选，末尾唯一确认键整轮一次回传，用户零输入完成终审；规范见 references/widget-checklist.md。无组件能力则用 Markdown checkbox / 口头报号，两条路径终审效力等同，用户随时可改用文字。
+
+执行：
 1. 按勾选更新单元 status（keep / drop），drop 的移入 archive/；
 2. **挪线改判**：移动单元文件目录 + 改 frontmatter 的 branch 字段。用户可随时改判，AI 无权拒绝；
 3. git 可用则 commit 一次；
@@ -125,4 +129,5 @@ description: "对话记忆管家：把对话当作可版本化管理的资产—
 - [references/scoring-rubric.md](references/scoring-rubric.md) — 五分细则、四维度展开、边界案例（混合单元、工具刷屏、联动改判）
 - [references/file-formats.md](references/file-formats.md) — 全部模板字段规范、状态机、git 命令速查
 - [references/integration.md](references/integration.md) — 三契约完整版、特征检测、降级矩阵
+- [references/widget-checklist.md](references/widget-checklist.md) — 终审/支线收尾弹窗组件规范（组件优先、结构契约、文本降级）
 - [templates/](templates/) — manifest / unit / checklist / rollback-brief 四模板，创建时复制
