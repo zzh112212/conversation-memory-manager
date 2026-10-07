@@ -23,7 +23,7 @@ npx skills add zzh112212/conversation-memory-manager -g -y
 ### 快速上手（对 AI 说）
 
 - 「归档这轮 / 记住这轮」→ 单元立刻落盘，强制 5 分
-- 「记忆清单」→ 生成终审清单，勾选文件或口头报编号定去留
+- 「记忆清单」→ 终审弹窗点选定去留（无组件能力的运行时：勾选文件或口头报编号，效力等同）
 - 「字体调试那几轮开支线」→ 独立归档独立评分，收尾三选一（合并/归档/删除）
 - 「回溯到定部署方案的节点」→ 生成重建简报，恢复当时上下文，后续内容封存不删
 
@@ -46,6 +46,7 @@ npx skills add zzh112212/conversation-memory-manager -g -y
 Say things like "archive this turn", "memory checklist", "branch off the font-debugging rounds", or "roll back to the node where we picked Vercel". Memory lives in `.memory/` at the project root. Works standalone; integrates optionally with `input-triage` and `context-continuity`.
 
 ## 版本 / Version
+- v1.3（2026-10-07）：**原生弹窗优先**——有组件能力必须先弹窗、不得先给文字清单；文字路径降为回退通道（无组件/渲染失败/用户主动改用），对话不再并列引导文字终审；evals 更新 +1
 - v1.2（2026-09-30）：终审/支线收尾组件优先——弹窗点选 + 一次确认回传替代逐条输入（新增 references/widget-checklist.md）；evals +1
 - v1.1（2026-09-30）：新增「应答进行中」自指单元规范（F1）；清单格式自检硬门槛（F3）；evals 新增 2 例（自指单元、清单格式自检）
 - v1.0（2026-09-29）：首发
